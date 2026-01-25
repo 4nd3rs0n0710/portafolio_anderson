@@ -11,13 +11,13 @@ export default function App() {
       tech: ["React.js", "Node.js", "Express", "PostgreSQL"],
       github: "https://github.com/tuusuario/inventario-aciel",
       demo: "#",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop"
+      image: "/img_proyectos/img_inventario_aciel.png"
     },
     {
       title: "Proyecto SENA",
       description: "Aplicación web desarrollada como proyecto de formación, implementando las mejores prácticas de desarrollo y arquitectura MVC.",
-      tech: ["Python", "Django", "PostgreSQL", "Bootstrap"],
-      github: "https://github.com/tuusuario/proyecto-sena",
+      tech: ["Python", "Django", "MySQL", "Bootstrap"],
+      github: "https://github.com/juanmateus7726/Prototipo-Control-Accesos/tree/Anderson",
       demo: "#",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop"
     }
@@ -26,7 +26,7 @@ export default function App() {
   const skills = [
     { category: "Frontend", items: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"] },
     { category: "Backend", items: ["Node.js", "Express", "Python", "Django"] },
-    { category: "Base de Datos", items: ["PostgreSQL", "SQL"] },
+    { category: "Base de Datos", items: ["PostgreSQL", "MySQL", "SQL" ] },
     { category: "Herramientas", items: ["Git", "GitHub", "VS Code", "Postman"] }
   ];
 
@@ -86,13 +86,13 @@ export default function App() {
             Desarrollador Full Stack | React.js • Node.js • Python
           </p>
           <div className="flex justify-center gap-4 mb-12">
-            <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
+            <a href="https://github.com/4nd3rs0n0710" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
+            <a href="https://www.linkedin.com/in/anderson-forero-617828313/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:tuemail@ejemplo.com" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
+            <a href="mailto:4nd3rs0nf0r3r0@gmail.com" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
               <Mail size={24} />
             </a>
           </div>
@@ -213,11 +213,11 @@ export default function App() {
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <a 
-              href="mailto:tuemail@ejemplo.com"
+              href="mailto:4nd3rs0nf0r3r0@gmail.com"
               className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition"
             >
               <Mail size={20} />
-              tuemail@ejemplo.com
+              Correo Electronico
             </a>
             <a 
               href="https://github.com/4nd3rs0n0710"
@@ -229,7 +229,7 @@ export default function App() {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/tuusuario"
+              href="https://www.linkedin.com/in/anderson-forero-617828313"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition"
@@ -243,7 +243,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-slate-700 text-center text-slate-400">
-        <p>© 2026 Anderson. Todos los derechos reservados.</p>
+        <p>© 2026 Anderson Forero. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
