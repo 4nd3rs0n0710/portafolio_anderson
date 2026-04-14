@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code2, Database, Server } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  }, []);
 
   const projects = [
     {
       title: "Sistema de Inventario - Aciel",
       description: "Sistema completo de gestión de inventario desarrollado con tecnologías modernas. Permite control de stock, gestión de productos y reportes en tiempo real.",
       tech: ["React.js", "Node.js", "Express", "PostgreSQL"],
-      github: "https://github.com/tuusuario/inventario-aciel",
+      github: "https://github.com/4nd3rs0n0710/BACKEND_INVENTARIO_ACIEL",
       demo: "#",
       image: "/img_proyectos/img_inventario_aciel.png"
     },
     {
-      title: "Proyecto SENA",
-      description: "Aplicación web desarrollada como proyecto de formación, implementando las mejores prácticas de desarrollo y arquitectura MVC.",
-      tech: ["Python", "Django", "MySQL", "Bootstrap"],
-      github: "https://github.com/juanmateus7726/Prototipo-Control-Accesos/tree/Anderson",
-      demo: "#",
+      title: "Sistema Control de Acceso / ACS",
+      description: "Aplicativo desarrollado para la gestión del personal de la compañia mediante Reconocimiento Facila.",
+      tech: ["Python", "Django", "PostgreSQL", "Bootstrap", "JavaScript", "FastAPI"],
+      github: "https://github.com/4nd3rs0n0710/control_acceso_aciel",
+      demo: "https://marcaciones.aciel.co/",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop"
     }
   ];
@@ -26,8 +36,8 @@ export default function App() {
   const skills = [
     { category: "Frontend", items: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"] },
     { category: "Backend", items: ["Node.js", "Express", "Python", "Django"] },
-    { category: "Base de Datos", items: ["PostgreSQL", "MySQL", "SQL" ] },
-    { category: "Herramientas", items: ["Git", "GitHub", "VS Code", "Postman"] }
+    { category: "Base de Datos", items: ["PostgreSQL", "MySQL", "SQL Server"] },
+    { category: "Herramientas", items: ["Git", "GitHub", "VS Code", "Postman", "XAMPP"] }
   ];
 
   const scrollToSection = (id) => {
@@ -76,29 +86,31 @@ export default function App() {
       {/* Hero Section */}
       <section id="inicio" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-7xl font-bold mb-6">
+          <h1 className="text-5xl sm:text-7xl font-bold mb-6" data-aos="fade-down">
             Hola, soy{' '}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Anderson
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl text-slate-300 mb-8">
+          <p className="text-xl sm:text-2xl text-slate-300 mb-8" data-aos="fade-up" data-aos-delay="200">
             Desarrollador Full Stack | React.js • Node.js • Python
           </p>
-          <div className="flex justify-center gap-4 mb-12">
-            <a href="https://github.com/4nd3rs0n0710" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
+          <div className="flex justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://github.com/4nd3rs0n0710" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition transform hover:scale-110">
               <Github size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/anderson-forero-617828313/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
+            <a href="https://www.linkedin.com/in/anderson-forero-617828313/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition transform hover:scale-110">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:4nd3rs0nf0r3r0@gmail.com" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition">
+            <a href="mailto:4nd3rs0nf0r3r0@gmail.com" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition transform hover:scale-110">
               <Mail size={24} />
             </a>
           </div>
           <button 
             onClick={() => scrollToSection('proyectos')}
             className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition transform hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
             Ver Proyectos
           </button>
@@ -108,8 +120,8 @@ export default function App() {
       {/* About Section */}
       <section id="sobre-mi" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-center">Sobre mí</h2>
-          <div className="bg-slate-900/50 rounded-xl p-8 border border-slate-700">
+          <h2 className="text-4xl font-bold mb-8 text-center" data-aos="fade-down">Sobre mí</h2>
+          <div className="bg-slate-900/50 rounded-xl p-8 border border-slate-700" data-aos="fade-up">
             <p className="text-lg text-slate-300 leading-relaxed mb-4">
               Soy un desarrollador full stack apasionado por crear soluciones web modernas y eficientes. 
               Con experiencia en tecnologías como React.js, Node.js, Python y Django, me especializo en 
@@ -126,10 +138,15 @@ export default function App() {
       {/* Projects Section */}
       <section id="proyectos" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Proyectos Destacados</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center" data-aos="fade-down">Proyectos Destacados</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition group">
+              <div 
+                key={index} 
+                className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition group"
+                data-aos="fade-up"
+                data-aos-delay={index * 200}
+              >
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -179,10 +196,15 @@ export default function App() {
       {/* Skills Section */}
       <section id="habilidades" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Habilidades Técnicas</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center" data-aos="fade-down">Habilidades Técnicas</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill, index) => (
-              <div key={index} className="bg-slate-900/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition">
+              <div 
+                key={index} 
+                className="bg-slate-900/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="flex items-center gap-3 mb-4">
                   {index === 0 && <Code2 className="text-cyan-400" size={24} />}
                   {index === 1 && <Server className="text-cyan-400" size={24} />}
@@ -207,14 +229,14 @@ export default function App() {
       {/* Contact Section */}
       <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">¿Trabajamos juntos?</h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <h2 className="text-4xl font-bold mb-8" data-aos="fade-down">¿Trabajamos juntos?</h2>
+          <p className="text-xl text-slate-300 mb-8" data-aos="fade-up" data-aos-delay="200">
             Estoy disponible para nuevas oportunidades. ¡Contactémonos!
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="400">
             <a 
               href="mailto:4nd3rs0nf0r3r0@gmail.com"
-              className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition"
+              className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition transform hover:scale-105"
             >
               <Mail size={20} />
               Correo Electronico
@@ -223,7 +245,7 @@ export default function App() {
               href="https://github.com/4nd3rs0n0710"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition"
+              className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition transform hover:scale-105"
             >
               <Github size={20} />
               GitHub
@@ -232,7 +254,7 @@ export default function App() {
               href="https://www.linkedin.com/in/anderson-forero-617828313"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition"
+              className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition transform hover:scale-105"
             >
               <Linkedin size={20} />
               LinkedIn
