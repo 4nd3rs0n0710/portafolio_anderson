@@ -16,6 +16,14 @@ export default function App() {
 
   const projects = [
     {
+      title: "Vehicles Manager — Monitoring Innovation",
+      description: "Sistema web para gestión de vehículos de concesionario. Incluye autenticación JWT, control de acceso por roles (RBAC), CRUD completo y logging estructurado. Frontend con animaciones fluidas y diseño fiel al mockup de Figma.",
+      tech: ["Next.js 14", "TypeScript", "Django", "DRF", "PostgreSQL", "Docker", "JWT", "Tailwind CSS", "Framer Motion"],
+      github: "https://github.com/4nd3rs0n0710/vehiculos-frontend",
+      demo: "https://vehiculos-frontend-theta.vercel.app",
+      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=400&fit=crop"
+    },
+    {
       title: "Sistema de Inventario - Aciel",
       description: "Sistema completo de gestión de inventario desarrollado con tecnologías modernas. Permite control de stock, gestión de productos y reportes en tiempo real.",
       tech: ["React.js", "Node.js", "Express", "PostgreSQL"],
@@ -25,7 +33,7 @@ export default function App() {
     },
     {
       title: "Sistema Control de Acceso / ACS",
-      description: "Aplicativo desarrollado para la gestión del personal de la compañia mediante Reconocimiento Facila.",
+      description: "Aplicativo desarrollado para la gestión del personal de la compañia mediante Reconocimiento Facial.",
       tech: ["Python", "Django", "PostgreSQL", "Bootstrap", "JavaScript", "FastAPI"],
       github: "https://github.com/4nd3rs0n0710/control_acceso_aciel",
       demo: "https://marcaciones.aciel.co/",
@@ -34,10 +42,10 @@ export default function App() {
   ];
 
   const skills = [
-    { category: "Frontend", items: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"] },
-    { category: "Backend", items: ["Node.js", "Express", "Python", "Django"] },
+    { category: "Frontend", items: ["React.js", "Next.js 14", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion"] },
+    { category: "Backend", items: ["Node.js", "Express", "Python", "Django", "Django REST Framework", "JWT"] },
     { category: "Base de Datos", items: ["PostgreSQL", "MySQL", "SQL Server"] },
-    { category: "Herramientas", items: ["Git", "GitHub", "VS Code", "Postman", "XAMPP"] }
+    { category: "Herramientas", items: ["Git", "GitHub", "Docker", "Vercel", "Render", "VS Code", "Postman"] }
   ];
 
   const scrollToSection = (id) => {
@@ -93,7 +101,7 @@ export default function App() {
             </span>
           </h1>
           <p className="text-xl sm:text-2xl text-slate-300 mb-8" data-aos="fade-up" data-aos-delay="200">
-            Desarrollador Full Stack | React.js • Node.js • Python
+            Desarrollador Full Stack | React.js • Next.js • Python • Django
           </p>
           <div className="flex justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="400">
             <a href="https://github.com/4nd3rs0n0710" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition transform hover:scale-110">
@@ -124,12 +132,12 @@ export default function App() {
           <div className="bg-slate-900/50 rounded-xl p-8 border border-slate-700" data-aos="fade-up">
             <p className="text-lg text-slate-300 leading-relaxed mb-4">
               Soy un desarrollador full stack apasionado por crear soluciones web modernas y eficientes. 
-              Con experiencia en tecnologías como React.js, Node.js, Python y Django, me especializo en 
+              Con experiencia en tecnologías como React.js, Next.js, Node.js, Python y Django, me especializo en 
               construir aplicaciones escalables y con excelente experiencia de usuario.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
               Actualmente desarrollo sistemas de gestión empresarial y continúo expandiendo mis conocimientos 
-              en nuevas tecnologías y mejores prácticas de desarrollo.
+              en nuevas tecnologías y mejores prácticas de desarrollo como Clean Architecture, SOLID y Docker.
             </p>
           </div>
         </div>
@@ -239,7 +247,7 @@ export default function App() {
               className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition transform hover:scale-105"
             >
               <Mail size={20} />
-              Correo Electronico
+              Correo Electrónico
             </a>
             <a 
               href="https://github.com/4nd3rs0n0710"
