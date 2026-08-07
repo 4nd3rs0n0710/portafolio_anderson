@@ -26,7 +26,7 @@ export default function App() {
     {
       title: "Sistema de Inventario - Aciel",
       description: "Sistema completo de gestión de inventario desarrollado con tecnologías modernas. Permite control de stock, gestión de productos y reportes en tiempo real.",
-      tech: ["React.js", "Node.js", "Express", "PostgreSQL"],
+      tech: [".NET", "Typescript", "Python", "SQL Server", "Next.js", "Azure", "Docker"],
       github: "https://github.com/4nd3rs0n0710/BACKEND_INVENTARIO_ACIEL",
       demo: "#",
       image: "/img_proyectos/img_inventario_aciel.png"
@@ -43,9 +43,9 @@ export default function App() {
 
   const skills = [
     { category: "Frontend", items: ["React.js", "Next.js 14", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion"] },
-    { category: "Backend", items: ["Node.js", "Express", "Python", "Django", "Django REST Framework", "JWT"] },
+    { category: "Backend", items: ["Node.js", "Express", "Python", "Django", ".NET"] },
     { category: "Base de Datos", items: ["PostgreSQL", "MySQL", "SQL Server"] },
-    { category: "Herramientas", items: ["Git", "GitHub", "Docker", "Vercel", "Render", "VS Code", "Postman"] }
+    { category: "Herramientas", items: ["Docker", "Azure DevOps", "GitHub", "Docker", "Vercel", "Render", "VS Code", "Postman"] }
   ];
 
   const scrollToSection = (id) => {
@@ -101,7 +101,7 @@ export default function App() {
             </span>
           </h1>
           <p className="text-xl sm:text-2xl text-slate-300 mb-8" data-aos="fade-up" data-aos-delay="200">
-            Desarrollador Full Stack | React.js • Next.js • Python • Django
+            Desarrollador Full Stack | .NET • TypeScript • Python •  Next.js • Azure DevOps • Docker
           </p>
           <div className="flex justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="400">
             <a href="https://github.com/4nd3rs0n0710" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition transform hover:scale-110">
